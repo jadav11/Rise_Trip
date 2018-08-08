@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title> TRIP MANAGEMENT SYSTEM </title>
+        <script>
+            window.onload = function () {
+                one = window.location.href;
+                status = one.search("flag");
+                if (status != -1) {
+                    document.getElementById("Error").innerHTML = "Username and password not found.";
+
+                }
+            }
+        </script>
+        <style>
+            #Error{
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <form action="login1connmatchEnPSW.php" method="post">
+
+            <div class="container">  <center>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="email" required>
+
+                    <br>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                    </br>
+                    <input type="submit" name = "Loign" value="Login"> 
+                    <label>
+                        <button type="submit" onclick="parent.location.href = 'registerform.php'" >Register</button>
+                        <div id="Error"></div>
+                        <br>
+                        <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                            <div class="container" style="background-color:#f1f1f1">
+                                </br>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                            </br>
+                        </label>
+                </center>
+            </div>
+
+
+        </form>
+
+    </body>
+</html>
